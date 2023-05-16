@@ -4,12 +4,16 @@
         <meta charset="utf-8">
         <title>My first JavaScript project</title>
         <script src="js/main.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <h1>Calculator</h1>
         <input type="text" id="variableOne" placeholder="Enter first number">
-        <input type="text" id="variableTwo" placeholder="Enter second number number">
-        <button onclick="addNumbers()">Add</button>
+        <input type="text" id="variableTwo" placeholder="Enter second number">
+        <div class="button-container">
+            <button onclick="addNumbers()">Add</button>
+            <button onclick="divideNumbers()">Divide</button>
+        </div>
         <p id="result"></p>
     </body>
-    
 </html>
