@@ -17,7 +17,9 @@ function validateInput(opp, first, second) {
         } else {
             return true;
         }
-    }   
+    }; 
+    
+    return true
 }
 
 function operate(opp, first, second) {
@@ -34,17 +36,20 @@ function main(opp, first, second) {
     const valid = validateInput(opp, first, second);
     if (valid == true) {
         operate(opp, first, second);
-    } 
+    }
 }
 
 // execution
-add_button.addEventListener('click', function() {
+add_button.addEventListener('click', function () {
     var first = parseInt(document.getElementById("variableOne").value);
     var second = parseInt(document.getElementById("variableTwo").value);
     main("add", first, second);
-});
-div_button.addEventListener('click', function() {
+    }
+);
+
+div_button.addEventListener('click', function () {
     var first = parseInt(document.getElementById("variableOne").value);
     var second = parseInt(document.getElementById("variableTwo").value);
     main("divide", first, second);
-});
+    }
+);
