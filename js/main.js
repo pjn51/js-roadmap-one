@@ -3,33 +3,48 @@
 const add_button = document.getElementById('add-button');
 const div_button = document.getElementById('divide-button');
 
-function addNumbers() {
-    var first = parseFloat(document.getElementById("variableOne").value);
-    var second = parseFloat(document.getElementById("variableTwo").value);
-
+// definitions
+function validateInput(opp, first, second) {
     if (isNaN(first) || isNaN(second)) {
         document.getElementById("result").textContent = "Both inputs must be numbers.";
-    } else {
+        return false;
+    };
+
+    if (opp === "divide") {
+        if (second == 0) {
+            document.getElementById("result").textContent = "Cannot divide by zero.";
+            return false;
+        } else {
+            return true;
+        }
+    }   
+}
+
+function operate(opp, first, second) {
+    if (opp == "add") {
         var result = first + second;
         document.getElementById("result").textContent = first + " + " + second + " = " + result;
+    } else {
+        var result = first / second;
+        document.getElementById("result").textContent = first + " / " + second + " = " + result;
     }
 }
 
-function divideNumbers() {
-    var first = parseFloat(document.getElementById("variableOne").value);
-    var second = parseFloat(document.getElementById("variableTwo").value);
+function main(opp, first, second) {
+    const valid = validateInput(opp, first, second);
+    if (valid == true) {
+        operate(opp, first, second);
+    } 
+}
 
-    if (isNaN(first) || isNaN(second)) {
-        document.getElementById("result").textContent = "Both inputs must be numbers.";
-    } else {
-        if (second == 0) {
-            document.getElementById("result").textContent = "Cannot divide by zero.";
-        } else {
-            var result = first / second;
-            document.getElementById("result").textContent = first + " / " + second + " = " + result;
-        }   
-    }
-};
-
-add_button.addEventListener('click', addNumbers);
-div_button.addEventListener('click', divideNumbers);
+// execution
+add_button.addEventListener('click', function() {
+    var first = parseInt(document.getElementById("variableOne").value);
+    var second = parseInt(document.getElementById("variableTwo").value);
+    main("add", first, second);
+});
+div_button.addEventListener('click', function() {
+    var first = parseInt(document.getElementById("variableOne").value);
+    var second = parseInt(document.getElementById("variableTwo").value);
+    main("divide", first, second);
+});
