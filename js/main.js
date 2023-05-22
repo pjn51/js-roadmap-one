@@ -17,8 +17,8 @@ function validateInput(opp, first, second) {
         } else {
             return true;
         }
-    }; 
-    
+    };
+
     return true
 }
 
@@ -44,12 +44,12 @@ add_button.addEventListener('click', function () {
     var first = parseInt(document.getElementById("variableOne").value);
     var second = parseInt(document.getElementById("variableTwo").value);
     main("add", first, second);
-    }
+}
 );
 
 div_button.addEventListener('click', function () {
     var first = parseInt(document.getElementById("variableOne").value);
     var second = parseInt(document.getElementById("variableTwo").value);
     main("divide", first, second);
-    }
+}
 );
