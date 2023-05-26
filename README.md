@@ -1,7 +1,7 @@
 # js-roadmap-one
 Unit one of my JavaScript roadmap: Build a simple interactive web page that incorporates JavaScript functionality to manipulate the DOM elements dynamically.
 
-### Done
+## Agenda (completed)
 1. Set up the basic HTML structure of the web page, including the necessary elements you want to manipulate. 
 2. Add the JavaScript code inside a `<script>` tag within the HTML file or a separate external JavaScript file linked to the HTML.
 3. Use the document.querySelector() or document.getElementById() method to select the DOM element(s) you want to manipulate.
