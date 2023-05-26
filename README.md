@@ -5,8 +5,6 @@ Unit one of my JavaScript roadmap: Build a simple interactive web page that inco
 1. Set up the basic HTML structure of the web page, including the necessary elements you want to manipulate. 
 2. Add the JavaScript code inside a `<script>` tag within the HTML file or a separate external JavaScript file linked to the HTML.
 3. Use the document.querySelector() or document.getElementById() method to select the DOM element(s) you want to manipulate.
-
-### Todo
 4. Assign event listeners to the selected element(s) using methods like addEventListener() to respond to user interactions.
 5. Define functions that will handle the desired actions or changes to the DOM elements based on the user interactions.
 6. Inside the event listener function(s), use DOM manipulation methods like innerHTML, textContent, setAttribute, or style to modify the selected elements dynamically.
